@@ -1,0 +1,27 @@
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+h4 {
+    text-align: center;
+}
+
+span {
+    text-transform: capitalize;
+}
+
+.center {
+    text-align: left;
+    padding: 50px;
+    background: #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
