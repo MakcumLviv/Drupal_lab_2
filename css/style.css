@@ -3,11 +3,8 @@
     margin: 0 auto;
 }
 
-h4 {
-    text-align: center;
-}
 
-span {
+td {
     text-transform: capitalize;
 }
 
