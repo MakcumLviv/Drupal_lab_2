@@ -1,11 +1,11 @@
 A simple Wikipedia Api Search
 
 How to start
-	1. Download this repo
+	1. download this repo
 	2. go cd drupal_lab_2
 	3. git checkout HM4
 	4. npm install
-	5. Open index.html
+	5. open index.html
 
 Stack:
 	JS
