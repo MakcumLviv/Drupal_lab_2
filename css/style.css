@@ -10,9 +10,6 @@ body {
 
 a {
     text-decoration: none;
-
-
-
 }
 
 .banner {
@@ -49,7 +46,6 @@ header {
 }
 
 .menu {
-
     display: flex;
 }
 
@@ -60,7 +56,6 @@ header {
 
 .menu_link {
     font-size: 20px;
-
 }
 
 .menu_link:hover {
@@ -80,7 +75,6 @@ li:first-child {
 }
 
 h1 {
-
     font-size: 140px;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 13px;
@@ -94,7 +88,6 @@ h1 {
 
 .content-wrap {
     display: flex;
-
 }
 
 .wrap figure {
@@ -103,8 +96,8 @@ h1 {
 }
 
 .wrap ul {
-    padding-left: 0px;
-    margin-top: 0px;
+    padding-left: 0;
+    margin-top: 0;
 }
 
 .small-pic {
@@ -114,7 +107,6 @@ h1 {
 
 .big-pic {
     float: left;
-
 }
 
 h3 {
@@ -124,7 +116,6 @@ h3 {
     margin-right: 150px;
     padding-left: 5px;
     padding-right: 95px;
-
 }
 
 h3 span {
@@ -156,29 +147,19 @@ h3 span {
 
 .news-wrap {
     display: flex;
-
 }
 
 .my_photo {
-    width: 665px;
-}
-
-@media only screen and (max-width: 1000px) {
-    .my_photo {
-        width: 644px;
-    }
+    width: 644px;
 }
 
 .my_story {
     background: #3624ea;
-
 }
-
-
 
 .my_story button {
     margin-top: 50px;
-    margin-left: 0px;
+    margin-left: 0;
     padding: 15px 35px;
     border: 2px solid #ffffff;
     font-size: 20px;
@@ -201,7 +182,6 @@ h3 span {
     margin-right: 250px;
 }
 
-
 .my_story h4 {
     font-size: 40px;
     margin-top: 140px;
@@ -210,7 +190,6 @@ h3 span {
 footer {
     background: url("../img/bottom.jpg") no-repeat center;
     height: 1640px;
-
 }
 
 .footer_wrap {
@@ -229,14 +208,12 @@ footer {
 
 .footer_expression h4 {
     margin-top: 150px;
-
     margin-right: 20px;
     font-size: 65px;
 }
 
 .footer_text p {
     margin-top: 150px;
-
     margin-right: 20px;
     font-size: 25px;
 }
@@ -253,4 +230,10 @@ footer {
 .footer_navigation {
     margin-top: 150px;
     margin-left: 200px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .my_photo {
+        width: 665px;
+    }
 }
