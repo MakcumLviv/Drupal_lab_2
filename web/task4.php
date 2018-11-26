@@ -18,9 +18,7 @@ if ($first == $second) {
       }
     }
 }
-echo '<br>';
-echo '</div>';
 
-include dirname(__DIR__) . '/web/footer.tpl.php';
+echo '</div>';
 
 ?>
