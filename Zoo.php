@@ -15,10 +15,13 @@ class Zoo {
   }
     
   function showAnimals() {
-    sort($this->animals);
-    echo '<pre>'; 
-    print_r($this->animals); 
-    echo '</pre>';
+    $content = "Zoo containts:\n";
+    $types = array_count_values(array_map('get_class', $this->animals));
+      
+      foreach ($types as $type => $count) {
+        $content .= "{$type}: {$count}\n";
+      }
+      echo $content;
   }
 }
 
