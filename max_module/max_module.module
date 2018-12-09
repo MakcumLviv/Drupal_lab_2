@@ -1,0 +1,155 @@
+<?php
+/**
+ *
+ * @files
+ * This file contain hooks and other global functions.
+ */
+
+/**
+ *  Implements hook_menu().
+ */
+function max_module_menu() {
+  $items = [];
+  // Define menu entry.
+  $items['max_module'] = [
+    // Title of our page.
+    'title' => 'Form Example',
+    // Callback function to generate content
+    'page callback' => 'drupal_get_form',
+    // We should let Drupal know which form do we need.
+    'page arguments' => ['max_module_form'],
+    // Configurations to check access to our page.
+    'access arguments' => ['access max_module form'],
+  ];
+  // return prepared items.
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function max_module_permission() {
+  return [
+    'access max_module form' => [
+      'title' => t('Access content for the Current posts module'),
+    ],
+  ];
+}
+
+/**
+ * Function to build form "max_module_form".
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return array
+ */
+function max_module_form($form, $form_state) {
+  // Message.
+  $form['markup']['#markup'] = format_string('<div>@markup</div>', ['@markup' => t('Enter the data into the form')]);
+  // checkbox
+  $form['one_radio'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Do you like the Drupal?'),
+    '#default_value' => 1,
+  ];
+  // checkboxes
+  $form['phone'] = [
+    '#type' => 'checkboxes',
+    '#options' => drupal_map_assoc([
+      t('android'),
+      t('ios'),
+      t('windows')]),
+    '#title' => t('What\'s in you  phone os?'),
+  ];
+  // Machine name
+  $form['machine_name'] = [
+    '#type' => 'machine_name',
+    '#maxlength' => 21,
+    '#machine_name' => [
+      'exists' => 'menu_edit_menu_name_exists',
+    ],
+  ];
+  // select
+  $form['your_browser'] = [
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#title' => t('Which is your browser?'),
+    '#options' => [
+      'Mozilla' => t('Mozilla'),
+      'Chrome' => t('Chrome'),
+      'Edge' => t('Edge'),
+    ]
+  ];
+  // textarea
+  $form['next_phone'] = [
+    '#title' => t('Tell us what phone you want'),
+    '#type' => 'textarea',
+    ];
+  // textfield
+  $form['phone_story'] = [
+    '#type' => 'textfield',
+    '#title' => t('Tell us something about your first phone'),
+    '#size' => 60,
+    '#maxlength' => 128,
+    '#required' => TRUE,
+  ];
+  // Button to send data
+  $form['hey'] = [
+    '#type' => 'submit',
+    '#value' => t('Save your answers'),
+  ];
+  return $form;
+}
+
+/**
+ * Validation handler for form "max_module" form.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return void
+ */
+function max_module_form_validate($form, &$form_state) {
+  // Check if you loke the Drupal
+  if($form_state['values']['one_radio']) {
+    drupal_set_message( t('You love Drupal'));
+  }
+  else{
+    drupal_set_message( t('You do not love Drupal'));
+  }
+  // Check your mobile os
+  if($form_state['values']['phone'] > 1) {
+    drupal_set_message( t('You have many phones with different os'));
+  }
+  else {
+    drupal_set_message( t('One is also not bad'));
+  }
+  // Check your phone story
+  if($form_state['values']['phone_story'] < 10) {
+    drupal_set_message( t('Very short story'));
+  }
+  else {
+    drupal_set_message( t('Very nice story'));
+  }
+  // Check the next phone
+  if($form_state['values']['next_phone']) {
+    drupal_set_message( t('Very nice story'));
+  }
+  // Check your browser
+  $your_browser = $form_state['values']['your_browser'];
+  switch ($your_browser){
+    case 'Mozilla':
+      drupal_set_message($your_browser . t(' Very cool good choice'));
+      break;
+    case 'Chrome':
+      drupal_set_message($your_browser . t(' Nice google product '));
+      break;
+    case 'Edge':
+      drupal_set_message($your_browser . t(' Old good Bill Gates '));
+      break;
+
+  }
+}
+
+

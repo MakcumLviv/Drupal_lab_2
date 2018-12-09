@@ -1,0 +1,4 @@
+name = Max module
+description = It's my first module for EPAM drupal lab.
+core = 7.x
+package = Custom
