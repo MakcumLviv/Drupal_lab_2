@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the drupal_lab_site module.
+ */
+
+/**
+ * Implements hook_update_n().
+ */
+function drupal_lab_site_update_7000() {
+  module_enable(['views', 'views_ui', 'entityreference']);
+}

@@ -1,0 +1,4 @@
+name = Drupal lab site
+description =  Module, used to automated changes to this site.
+core = 7.x
+package = Custom
