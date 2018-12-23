@@ -1,0 +1,16 @@
+name = Product review
+core = 7.x
+package = Features
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = image
+dependencies[] = options
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_product
+features[field_base][] = field_product_review_image
+features[field_instance][] = node-product_review-body
+features[field_instance][] = node-product_review-field_product
+features[field_instance][] = node-product_review-field_product_review_image
+features[node][] = product_review
