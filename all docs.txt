@@ -1,9 +1,10 @@
 PHP storm 
 
 Ctrl+Alt+S (File>Settings)
-Editor>Code Style>HTML (íàçâàíèå âàøåãî ÿçûêà)
-Íåîáõîäèìî èçìåíèòü Tab size, Ident, Continuation ident — ÿ ñòàâëþ âñå 2.
+Editor>Code Style>HTML (Ã­Ã Ã§Ã¢Ã Ã­Ã¨Ã¥ Ã¢Ã Ã¸Ã¥Ã£Ã® Ã¿Ã§Ã»ÃªÃ )
+ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¨Ã§Ã¬Ã¥Ã­Ã¨Ã²Ã¼ Tab size, Ident, Continuation ident â€” Ã¿ Ã±Ã²Ã Ã¢Ã«Ã¾ Ã¢Ã±Ã¥ 2.
 
+https://docs.google.com/spreadsheets/d/1iyEf4cZDCUHUqTG-eU8J_Djs7HRTSS_ettwdmaspC0Y/edit#gid=0
 https://frontendlabepam.github.io/FL6/
 https://stackoverflow.com/questions/20796714/how-do-i-start-mongo-db-from-windows
 
@@ -25,14 +26,13 @@ https://github.com/MarkoStavovuy/Drupal_lab_2/branches/active
 docker-compose exec php sh
 cd web
 
-drush sql-dump > /path/to/èìÿôàéëà.sql
+drush sql-dump > /path/to/Ã¨Ã¬Ã¿Ã´Ã Ã©Ã«Ã .sql
 mysqldump -udgd7 -pdgd7 dgd7 > db/development.sql
 
 composer show
 composer require drupal/views
 docker exec -it my_drupal_project_php bash -bash
 docker cp -a 52df75af787a:/var/www/html/web D:\lll\hm8\HM8
-
 
 
     List all containers (only IDs) docker ps -aq
