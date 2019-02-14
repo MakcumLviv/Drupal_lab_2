@@ -1,0 +1,47 @@
+PHP storm 
+
+Ctrl+Alt+S (File>Settings)
+Editor>Code Style>HTML (название вашего €зыка)
+Ќеобходимо изменить Tab size, Ident, Continuation ident Ч € ставлю все 2.
+
+https://frontendlabepam.github.io/FL6/
+https://stackoverflow.com/questions/20796714/how-do-i-start-mongo-db-from-windows
+
+https://www.drupal.org/docs/7
+https://habr.com/post/202202/
+https://blogpost.pp.ua/drupal?page=7
+http://drupal-learning.com/
+http://azbukaweb.ru/creating-modules-a-tutorial-drupal-7x
+
+Drupal7Theme
+https://www.youtube.com/watch?v=jj0xYMQu8Kg&list=PLKVMmwQbGiV2rC0_IjX_hjFuO9pvAb2E6&index=5
+https://www.youtube.com/watch?v=F4Cuy7anSyo
+
+https://github.com/MykolaMaksymivUa?tab=repositories
+https://github.com/olehi94/drupal-lab-2/branches/active
+https://github.com/MarkoStavovuy/Drupal_lab_2/branches/active
+
+
+docker-compose exec php sh
+cd web
+
+drush sql-dump > /path/to/им€файла.sql
+mysqldump -udgd7 -pdgd7 dgd7 > db/development.sql
+
+composer show
+composer require drupal/views
+docker exec -it my_drupal_project_php bash -bash
+docker cp -a 52df75af787a:/var/www/html/web D:\lll\hm8\HM8
+
+
+
+    List all containers (only IDs) docker ps -aq
+    Stop all running containers. docker stop $(docker ps -aq)
+    Remove all containers. docker rm $(docker ps -aq)
+    Remove all images. docker rmi $(docker images -q)
+    docker ps -a
+    docker info
+    docker-compose logs
+
+    echo '<pre>';
+    print_r($_SERVER);
